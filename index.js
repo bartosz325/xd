@@ -1,4 +1,4 @@
-var express = require('express')
+/*var express = require('express')
 var app = express()
 
 app.set('port', (process.env.PORT || 80))
@@ -14,3 +14,11 @@ app.get('/', function(request, response) {
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
+*/
+
+var http = require('http');
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World!');
+}).listen(8080);
