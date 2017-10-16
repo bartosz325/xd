@@ -1,4 +1,4 @@
-/*var express = require('express')
+var express = require('express')
 var app = express()
 
 app.set('port', (process.env.PORT || 80))
@@ -14,12 +14,7 @@ app.get('/', function(request, response) {
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
-*/
-
-var http = require('http');
-
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('Hello World!'); //write a response to the client
-  res.end(); //end the response
-}).listen(8080); //the server object listens on port 8080
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const dom = new JSDOM(`<p>Hello world</p>`);
+console.log(dom.window.document.querySelector("p").textContent);
