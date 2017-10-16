@@ -7,7 +7,8 @@ app.use(express.static(__dirname + '/public'))
 app.get('/', function(request, response) {
   var a='bartosz';
   a=a.substr(1,3);
-  response.send('Hello World!'+a)
+  var b='<html><head><title>dasdas</title></head><body>Hello World!'+a+' xd</body></html>';
+  response.send(b);
 })
 
 app.listen(app.get('port'), function() {
