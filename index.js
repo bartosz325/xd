@@ -1,6 +1,5 @@
 var express = require('express')
 var app = express()
-var jsdom = require("jsdom");
 
 app.set('port', (process.env.PORT || 80))
 app.use(express.static(__dirname + '/public'))
