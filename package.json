@@ -12,11 +12,6 @@
   "engines": {
     "node": "4.0.0"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
   "author": "Mark Pundsack",
   "contributors": [
     "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
