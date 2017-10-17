@@ -3,7 +3,7 @@ var app = express()
 var request = require('tinyreq');
 var app2 = request()
 
-request("http://ionicabizau.net/", function (err, body) {
+app2.request("http://ionicabizau.net/", function (err, body) {
     console.log(err || body); // Print out the HTML
 });
 
