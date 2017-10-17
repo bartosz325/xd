@@ -3,9 +3,6 @@ var app = express()
 var request = require('tinyreq');
 var app2 = request()
 
-app2.use("http://ionicabizau.net/", function (err, body) {
-    console.log(err || body); // Print out the HTML
-});
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
