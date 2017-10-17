@@ -1,16 +1,15 @@
 var express = require('express')
 var app = express()
-var request = require("tinyreq");
-
-request("http://ionicabizau.net/", function (err, body) {
-    console.log(err || body); // Print out the HTML
-});
+var req = require("tinyreq");
 
 app.set('port', (process.env.PORT || 80))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-  response.send('Hello World!')
+    req("http://ionicabizau.net/", function (err, body) {
+    response.send(err || body); // Print out the HTML
+    });
+    
 })
 
 app.listen(app.get('port'), function() {
