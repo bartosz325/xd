@@ -22,7 +22,8 @@ function xd() {
 	document.getElementById('lol').contentWindow.document.getElementById('password_input').value='fro2303bog';
 	//document.getElementById('lol').contentWindow.document.getElementsByClassName('submit')[0].click();
 }
-
+xmlhttp.open("GET", "index2.php", true);
+xmlhttp.send();
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 })
